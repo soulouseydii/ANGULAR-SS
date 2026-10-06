@@ -1,7 +1,7 @@
 /*Aquest fitxer conté la lògica:propietats,mètodes, getters...*/
 
 import { Component } from '@angular/core';
-import { Producte } from '../../interficies/Producte';
+import { Producte } from '../../interficies/producte';
 
 @Component({
   imports: [],

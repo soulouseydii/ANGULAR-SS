@@ -1,15 +1,37 @@
 <!-- app.html-->
- <h2> El meu catàleg </h2>
- <app-tarjets/>
- <app-tarjets/>
+<!-- <h2> El meu catàleg </h2>  -->  
+
+
+ <!-- SENE FOR - REPETITIU-->
 
 
 
- 
 
-<!-- <app-perfil/>
-<app-perfil/>
+ <!-- AMB FOR una sola línea amb tants elements com calguin-->
+
+<!--  @for (ciutat of ciutats; track ciutat){
+
+<p> {{ciutat}} </p>
+}
+
+
+@for (ciutat of ciutats; track ciutat; let i = $index){
+    <p> {{i+1}} - {{ciutat}} </p>
+}
 
 -->
+
+ <!-- <app-perfil/>
+ <app-perfil/> -->
+
+
+ <!-- crea un array de mínim 5 elements al app.ts
+  usa @for per mostrar els elements de l'array
+  $index per mostrar l'ordre -->
+
+  <h2> Marcas de zapatillas </h2>
+  @for (marca of marcas; track marca; let i = $index){
+    <p> {{i+1}}. {{marca}} </p>
+  }
 
  <router-outlet />

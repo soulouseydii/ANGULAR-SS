@@ -126,4 +126,9 @@ p2 = new ProducteClass('Airpods', 249.99);
       console.log(this.alumne1.gethaAprobat());
   }
   
+
+  // ciutats: string[] = ['Lleida', 'Barcelona', 'Girona', 'Tarragona'];
+
+  marcas: string[] = ['Nike', 'Adidas', 'Jordan', 'Asics', 'New Balance'];
+
 }
