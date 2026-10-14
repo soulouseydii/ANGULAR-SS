@@ -29,14 +29,24 @@ amb {{nom}} --> el valor por canviar i l'HTML s'actualitzarà automàticament. H
 */
 
   nom: String = 'Ordenador Gamer Pro'
-  preu: number = 2223
+  preu: number = 3899
+  disponible: boolean = true
   estoc: number = 5
 
 
   producte : Producte = {
     id: 1,
     nom: 'Ordinador Gamer Pro',
-    preu: 2223,
+    preu: 3899,
+    disponible: true,
+    estoc: 5
+
+  };
+
+  producte2 : Producte = {
+    id: 2,
+    nom: 'MacBook Pro',
+    preu: 3000,
     disponible: true
 
   };
@@ -57,6 +67,27 @@ amb {{nom}} --> el valor por canviar i l'HTML s'actualitzarà automàticament. H
     }
 
     // Getter2: estat de disponibilitat en text
-    
 
+    get estatDisponibilitat(): string {
+      if (this.producte.estoc === 0) { 
+        return 'Esgotat';
+      } else {
+        return 'Disponible';
+      }
+    }
 }
+
+/* AFEGIR ETIUETA OFERTA I GRATIUIT 
+
+si el preu es inferior a 20 : oferta
+si el preu es 0 : gratuit
+si el preu es superior a 100 : premium
+
+*/
+
+/*
+if dins d'un for per marcar productes especials
+
+si la categoria es informàtica: div amb "destacat"
+
+*/

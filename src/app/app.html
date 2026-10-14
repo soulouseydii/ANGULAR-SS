@@ -2,9 +2,17 @@
 <!-- <h2> El meu catàleg </h2>  -->  
 
 
+<!-- sessió control flow if -->
+
+<!-- <app-info></app-info> --> 
+
+
+
  <!-- SENE FOR - REPETITIU-->
 
 
+ <!-- <app-tarjets/> 
+ <app-tarjets/> -->
 
 
  <!-- AMB FOR una sola línea amb tants elements com calguin-->
@@ -21,17 +29,45 @@
 
 -->
 
- <!-- <app-perfil/>
- <app-perfil/> -->
-
 
  <!-- crea un array de mínim 5 elements al app.ts
   usa @for per mostrar els elements de l'array
   $index per mostrar l'ordre -->
 
-  <h2> Marcas de zapatillas </h2>
+  <!-- <h2> Marcas de zapatillas </h2>
   @for (marca of marcas; track marca; let i = $index){
     <p> {{i+1}}. {{marca}} </p>
-  }
+  } -->
+
+  <!-- EXERCICI: CONTROL FLOW (@for i @if) -->
+  <h2>El meu catàleg de productes</h2>
+
+  <div class="cataleg">
+    @for (prod of productes; track prod.id) {
+      <div class="targeta-producte">
+
+        <!-- if dins d'un for: si la categoria és informàtica -> div amb "destacat" -->
+        @if (prod.categoria === 'informàtica') {
+          <div class="destacat">Destacat</div>
+        }
+
+        <h3>{{ prod.nom }}</h3>
+        <p class="categoria">Categoria: {{ prod.categoria }}</p>
+        <p class="preu">Preu: {{ prod.preu }} €</p>
+
+        <!-- Etiquetes segons el preu (0: gratuït, <20: oferta, >100: premium) -->
+        <div class="contenidor-etiquetes">
+          @if (prod.preu === 0) {
+            <span class="etiqueta gratuit">Gratuït</span>
+          } @else if (prod.preu < 20) {
+            <span class="etiqueta oferta">Oferta</span>
+          } @else if (prod.preu > 100) {
+            <span class="etiqueta premium">Premium</span>
+          }
+        </div>
+
+      </div>
+    }
+  </div>
 
  <router-outlet />

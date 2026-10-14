@@ -7,10 +7,11 @@ import { funcions } from './models/funcions';
 import { Tarjets } from './components/tarjets/tarjets';
 import { Perfil } from './components/perfil/perfil';
 import { Alumne } from './models/alumne';
+import { Info } from './components/info/info';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Perfil, Tarjets],
+  imports: [RouterOutlet, Perfil, Tarjets, Info],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -35,23 +36,12 @@ export class App {
   ciutat = 'Lleida'; // string
   codiP = 25605; // number
 
-  // Objecte de tipus Producte
-  producte: Producte = {
-    id: 1,
-    nom: 'PC',
-    preu: 999,
-    disponible: true,
-  };
-
-  producte2: Producte = {
-    id: 2,
-    nom: 'Ivan',
-    preu: 5,
-    disponible: false,
-  };
-
-
-  productes: Producte[] = [this.producte, this.producte2]; 
+  // Objectes de tipus Producte per a la pràctica
+  productes: Producte[] = [
+    { id: 1, nom: 'PC Gaming', preu: 999, disponible: true, categoria: 'informàtica' },
+    { id: 2, nom: 'Curs Inicial Linux', preu: 0, disponible: true, categoria: 'informàtica' },
+    { id: 3, nom: 'Auriculares de cable', preu: 15, disponible: true, categoria: 'informàtica' },
+  ]; 
 
   p1 = new ProducteClass('Teclat', 89.99);
   

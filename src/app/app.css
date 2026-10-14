@@ -1,0 +1,65 @@
+.cataleg {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.targeta-producte {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  width: 220px;
+  position: relative;
+  background-color: #fdfdfd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.destacat {
+  background-color: #ff9800;
+  color: white;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  display: inline-block;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.categoria {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 4px 0;
+}
+
+.preu {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.contenidor-etiquetes {
+  margin-top: 10px;
+}
+
+.etiqueta {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.etiqueta.oferta {
+  background-color: #28a745; /* Verd */
+}
+
+.etiqueta.gratuit {
+  background-color: #17a2b8; /* Blau cel */
+}
+
+.etiqueta.premium {
+  background-color: #6f42c1; /* Purpura */
+}

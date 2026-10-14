@@ -6,7 +6,9 @@ export interface Producte {
     nom: string;
     preu: number;
     disponible: boolean;
+    estoc ?: number; 
     descripcio ?: string; // ? vol dir que es un camp opcional
+    categoria?: string;
 }
 
 
